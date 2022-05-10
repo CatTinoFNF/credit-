@@ -917,6 +917,13 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
 		}
+		
+		var creditText:FlxText = new FlxText(876, 648, 348);
+		creditText.text = 'PORTED BY\nCATTINO';
+		creditText.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		creditText.cameras = [camHUD];
+		creditText.scrollFactor.set();
+		add(creditText);
 
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
